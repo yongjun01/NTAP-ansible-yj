@@ -1,0 +1,15 @@
+---
+# sample 
+
+- name: Install Dependancy package
+  yum: name={{ item }} state=installed
+  with_items:
+   - libjpeg*
+   - libpng*
+   - freetype*
+   - gd-*
+   - gcc
+   - gcc-c++
+   - gdbm-devel
+   - libtermcap-devel
+
