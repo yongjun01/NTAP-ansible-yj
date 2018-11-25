@@ -5,7 +5,7 @@
   - name: Verify & Create MySQL Backup Directory
     file:
     name: /srv/backup
-    state:directory
+    state: directory
     
   - name: create a backup
     mysql_db:
