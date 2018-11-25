@@ -1,7 +1,7 @@
 ---
 # sample 
 
-- name: Install Dependancy package
+- name: Install Dependency packages
   yum: name={{ item }} state=installed
   with_items:
    - nfs-utils
