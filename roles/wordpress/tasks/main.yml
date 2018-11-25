@@ -28,8 +28,8 @@
 - name: Change ownership of WordPress installation
   file: path=/srv/wordpress/ owner=wordpress group=wordpress state=directory recurse=yes
 
-- name: Softlink wordpress directory
-  command: ln -s /srv/wordpress /var/www/html/
+#- name: Softlink wordpress directory
+#  command: ln -s /srv/wordpress /var/www/html/
 
 - name: Synchronize two directories on one remote host.
   synchronize:
