@@ -1,8 +1,3 @@
 ---
 - name: Install httpd
   yum: name=httpd state=present
-
-#- name: Copy apache configuration for php
-#  template: src=httpd.conf dest=/etc/httpd/conf/httpd.conf
-#  notify: restart httpd
-
