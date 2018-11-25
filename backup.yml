@@ -1,0 +1,11 @@
+---
+- hosts: wordpress-server
+  become: true
+  tasks:
+  - name: create a backup
+    mysql_db:
+      state: dump
+      name: all
+      target: /tmp/wordpress.sql
+      login_user: root
+#      login_password: secret
