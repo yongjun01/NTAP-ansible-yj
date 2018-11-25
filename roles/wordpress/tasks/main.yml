@@ -30,6 +30,6 @@
 
 - name: copy wordpress files
   copy: 
-    src: /srv/wordpress/*
+    src: /srv/wordpress
     dest: /var/www/html
     remote_src: yes
