@@ -33,7 +33,7 @@
 
 - name: Synchronize two directories on one remote host.
   synchronize:
-    src: /srv/wordpress
-    dest: /var/www/html
+    src: /srv/wordpress/*
+    dest: /var/www/html/
   delegate_to: "{{ inventory_hostname }}"
 
