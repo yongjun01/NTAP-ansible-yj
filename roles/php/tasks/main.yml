@@ -5,16 +5,11 @@
     - php70
     - php70-php
     - php70-php-enchant
-#    - php70-IDNA_Convert
     - php70-php-mbstring
     - php70-php-mysql
     - php70-php-pdo
     - php70-php-process
     - php70-php-xml
-
-#- name: Disable default pool
-#  command: mv /etc/opt/remi/php70/php-fpm.d/www.conf /etc/opt/remi/php70/php-fpm.d/www.disabled creates=/etc/opt/remi/php70/php-fpm.d/www.disabled
-#  notify: restart php70-php-fpm
 
 - name: Copy php70 configuration
   template: src=httpd.conf dest=/etc/httpd/conf/httpd.conf
