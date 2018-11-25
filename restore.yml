@@ -1,0 +1,8 @@
+---
+-host: wordpress-server
+tasks:
+  - name: Restore database
+    mysql_db:
+      name: my_db
+      state: import
+      target: /srv/backup/wordpress.sql
