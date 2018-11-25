@@ -1,5 +1,5 @@
 ---
-- name: Install php-gd
+- name: Install php70
   yum: name={{ item }} state=present
   with_items:
 - name: Install php70 and deps
