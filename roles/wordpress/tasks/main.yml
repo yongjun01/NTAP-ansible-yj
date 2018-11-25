@@ -31,9 +31,9 @@
 - name: Softlink wordpress directory
   command: ln -s /srv/wordpress /var/www/html/
 
-- name: Synchronize and delete files in dest on the remote host that are not found in src of localhost.
+- name: Synchronize two directories on one remote host.
   synchronize:
     src: /srv/wordpress
     dest: /var/www/html
-    delete: no
-    recursive: yes
+  delegate_to: "{{ inventory_hostname }}"
+
