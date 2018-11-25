@@ -2,37 +2,21 @@
 - name: Install php-gd
   yum: name={{ item }} state=present
   with_items:
-    - php-gd
-#    - php70-php
-#    - php70-php-enchant
-#    - php70-php-mbstring
-#    - php70-php-mysql
-#    - php70-php-pdo
-#    - php70-php-process
-#    - php70-php-xml
+- name: Install php70 and deps
+  yum: name={{ item }} state=present
+  with_items:
+    - php70
+    - php70-php
+    - php70-php-enchant
+    - php70-php-mbstring
+    - php70-php-mysql
+    - php70-php-pdo
+    - php70-php-process
+    - php70-php-xml
 
-- name: Copy php configuration
+- name: Copy php70 configuration
   template: src=httpd.conf dest=/etc/httpd/conf/httpd.conf
   notify: restart httpd
 
 - name: Copy php70 configuration
   template: src=phpinfo.php dest=/var/www/html/
-
-#- name: Install php70 and deps
-#  yum: name={{ item }} state=present
-#  with_items:
-#    - php70
-#    - php70-php
-#    - php70-php-enchant
-#    - php70-php-mbstring
-#    - php70-php-mysql
-#    - php70-php-pdo
-#    - php70-php-process
-#    - php70-php-xml
-#
-#- name: Copy php70 configuration
-#  template: src=httpd.conf dest=/etc/httpd/conf/httpd.conf
-#  notify: restart httpd
-#
-#- name: Copy php70 configuration
-#  template: src=phpinfo.php dest=/var/www/html/
