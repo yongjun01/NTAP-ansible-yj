@@ -6,7 +6,7 @@
   # sudo: yes
 
   roles:
-    - dependencies
+    - refrepkg
     - common
     - mariadb
     - httpd
