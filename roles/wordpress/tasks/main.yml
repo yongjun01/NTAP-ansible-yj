@@ -29,4 +29,7 @@
   file: path=/srv/wordpress/ owner=wordpress group=wordpress state=directory recurse=yes
 
 - name: copy wordpress files
-  command: cp -r /srv/wordpress/* /var/www/html
+  copy: 
+    src: /srv/wordpress/*
+    dest: /var/www/html
+    remote_src: yes
