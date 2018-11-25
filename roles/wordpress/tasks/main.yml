@@ -29,7 +29,8 @@
   file: path=/srv/wordpress/ owner=wordpress group=wordpress state=directory recurse=yes
 
 - name: copy wordpress files
-  copy: 
+  synchronize: 
     src: /srv/wordpress
     dest: /var/www/html
-    remote_src: yes
+#    remote_src: yes
+#    directory_mode: yes
