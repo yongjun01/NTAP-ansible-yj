@@ -6,9 +6,10 @@
   # sudo: yes
 
   roles:
-    - referpkg
+    - dependencies
     - common
     - mariadb
     - httpd
     - php
     - wordpress
+#    - backupDB
