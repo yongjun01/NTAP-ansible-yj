@@ -2,10 +2,15 @@
 - hosts: wordpress-server
   become: true
   tasks:
+  - name: Verify & Create MySQL Backup Directory
+    file:
+    name: srv/backup
+    state:directory
+    
   - name: create a backup
     mysql_db:
       state: dump
       name: all
-      target: /tmp/wordpress.sql
+      target: /srv/backup/wordpress.sql
       login_user: root
 #      login_password: secret
