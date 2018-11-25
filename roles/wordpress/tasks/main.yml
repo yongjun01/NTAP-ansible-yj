@@ -29,9 +29,9 @@
   file: path=/srv/wordpress/ owner=wordpress group=wordpress state=directory recurse=yes
 
 - name: copy wordpress files
-  synchronize: 
+  copy: 
     src: /srv/wordpress
     dest: /var/www/html
-#    remote_src: yes
-#    directory_mode: yes
-  delegate_to: "{{ inventory_hostname }}"
+    remote_src: yes
+    directory_mode: yes
+
