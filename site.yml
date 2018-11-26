@@ -1,6 +1,6 @@
 ---
 - name: Install WordPress, MariaDB, httpd, and PHP
-  hosts: Wordpress_2
+  hosts: wordpress-server
   remote_user: root
   # remote_user: user
   # sudo: yes
